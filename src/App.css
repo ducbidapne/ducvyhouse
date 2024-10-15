@@ -1,6 +1,25 @@
 .App {
   text-align: center;
 }
+/* App.css */
+
+.spline-embed iframe {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide watermark using an overlay - use with caution */
+.spline-embed iframe::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 30px;
+  background-color: #ffffff;
+  opacity: 0; /* Make it visible temporarily with opacity: 1 if needed */
+  z-index: 2;
+}
 
 .App-logo {
   height: 40vmin;
